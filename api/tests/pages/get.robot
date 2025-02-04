@@ -8,6 +8,7 @@ Suite Teardown    Fechar Sessão
 Buscar Página
     [Tags]    TC002
     ${NAME_PAGE}    Criar Página
-    ${ID_PAGE}    Buscar Página     NAME_PAGE=${NAME_PAGE}
+    ${ID_PAGE}      Buscar Página     NAME_PAGE=${NAME_PAGE}
+    ${MODULE_ID}    Buscar Página Retornando Modulo     NAME_PAGE=${NAME_PAGE}
     Deletar Página    ID_PAGE=${ID_PAGE}    expected_status=204
 

@@ -1,0 +1,37 @@
+{
+    "type": "app-slide-product-scroll-update-v1",
+    "payload": {
+        "id": "67a2668d587a5c6e9ce534d0",
+        "idPage": "67a2668d587a5c6e9ce534ce",
+        "idModule": "67a2668d587a5c6e9ce534cf",
+        "targets": [
+            {
+                "index": 0,
+                "type": 4,
+                "typeModule": 12,
+                "filter": "{\"category-1\":[\"casa\"]}",
+                "sort": "{\"key\":\"\"}",
+                "title": "Teste Automacao",
+                "category": "BEL",
+                "tagging": "852544_APP_67A2668D587A5C6E9CE534CE_01_BEL_PRODUCT-SCROLL_20250204_TESTE-AUTOMACAO",
+                "order": 1,
+                "randNumber": 852544,
+                "lastUpdate": "2025-02-04T11:09:37-03:00"
+            }
+        ],
+        "title": "Teste Automacao",
+        "isStaging": false,
+        "isProd": false,
+        "isScheadule": false,
+        "userUpdated": "Automacao QA",
+        "lastUpdated": "2025-02-04T16:12:13.799-03:00",
+        "order": 1,
+        "typeModule": 12,
+        "typeMessage": {
+            "id": 0,
+            "name": "NoMessage",
+            "text": "Sem mensagem"
+        },
+        "showTitle": true
+    }
+}

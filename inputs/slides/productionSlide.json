@@ -1,0 +1,9 @@
+{
+    "type": "_typeProduction",
+    "payload": {
+      "id": "_slideID",
+        "idPage": "_idPage",
+        "idModule": "_idModule",
+        "IsProduction": "_isProduction"
+    }
+}

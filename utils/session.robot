@@ -6,10 +6,11 @@ Resource   ../utils/main.resource
 Criar Sessão
     ${headers}    Create Dictionary      
     ...    Content-Type=application/json
+    ...    Authorization=automacao-qa
     Create Session    
     ...    alias=api    
     ...    url=${base_url_dev}    
-    ...    headers=${headers}    
+    ...    headers=${headers}
     ...    disable_warnings=1
     
 Fechar Sessão

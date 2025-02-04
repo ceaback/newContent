@@ -1,0 +1,18 @@
+{
+    "type": "_type",
+    "payload": {
+        "targets": [
+            {
+                "title": "_title",
+                "type": "_numberType",
+                "sort": "_sort",
+                "filter": "_filter",
+            "category": "_category",
+                "lastUpdate": "_lastUpdate"
+            }
+        ],
+        "title": "_title",
+        "idModule": "_idModule",
+        "idPage": "_idPage"
+    }
+}
