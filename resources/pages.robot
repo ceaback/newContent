@@ -18,6 +18,9 @@ Criar Página
 
     Return From Keyword    ${NAME_PAGE}
 
+    # ${schema_contract}  Get Json Schema  ${nome_do_schema}
+    # Validate Jsonschema From File    ${schema_contract}    ${nome_do_schema}
+
 Buscar Página
     [Arguments]    ${NAME_PAGE}    ${expected_status}
 

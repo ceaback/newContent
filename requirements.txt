@@ -3,3 +3,4 @@ robotframework-requests
 curlify
 robotframework-faker
 robotframework-jsonlibrary
+robotframework-jsonvalidator

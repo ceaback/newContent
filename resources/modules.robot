@@ -18,13 +18,7 @@ Buscar Slides GET Modules
     ${INDEX_SLIDE}             Set Variable      ${response.json()}[0][targets][0][index]
     ${RAND_NUMBER}             Set Variable      ${response.json()}[0][targets][0][randNumber]
 
-    RETURN    ${ID_SLIDE}    ${TAGGING_PAGE}    ${INDEX_SLIDE}    ${RAND_NUMBER}
-
-    # Return From Keyword    ${ID_SLIDE}
-    # Return From Keyword    ${TAGGING_PAGE}
-    # Return From Keyword    ${INDEX_SLIDE}
-    # Return From Keyword    ${RAND_NUMBER}
-    Log List    RETURN
+    Return From Keyword    ${ID_SLIDE}
 
 Publicar Módulo Em Produção
      [Arguments]    ${ID_PAGE}    ${MODULE_ID}   ${file}    ${expected_status}

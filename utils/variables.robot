@@ -2,6 +2,7 @@
 Resource   ../utils/main.resource
 
 *** Variables ***
+###criar slide###
 &{create_slide_app_scroll}
 ...    type=app-slide-product-scroll-create-v1
 ...    title=Teste Automacao
@@ -10,6 +11,7 @@ Resource   ../utils/main.resource
 ...    filter={\\"category-1\\":[\\"casa\\"]}
 ...    category=BEL
 ...    lastUpdate=2025-02-04T11:09:37
+
 
 &{update_slide_app_scroll}
 ...    type=app-slide-product-scroll-update-v1
@@ -50,6 +52,8 @@ Resource   ../utils/main.resource
 &{slide_false_staging}
 ...    type=app-slide-publish-staging-v1
 ...    IsProduction= false
+
+###módulos***
 
 &{module_true_production}
 ...    type=app-module-publish-production-v1

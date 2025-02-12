@@ -8,6 +8,6 @@ Suite Teardown    Fechar Sessão
 Teste Criar Página
     [Tags]    TC001
 
-    ${NAME_PAGE}    Criar Página
-    ${ID_PAGE}    Buscar Página     NAME_PAGE=${NAME_PAGE}
+    ${NAME_PAGE}    Criar Página    expected_status=201
+    ${ID_PAGE}    Buscar Página     NAME_PAGE=${NAME_PAGE}    expected_status=200
     Deletar Página                  ID_PAGE=${ID_PAGE}    expected_status=204

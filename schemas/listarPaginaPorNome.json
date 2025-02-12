@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "required": [
+        "page",
+        "modulesHeader",
+        "modulesBody",
+        "modulesFooter"
+    ],
+    "properties": {
+        "page": {
+            "type": "object",
+            "required": [
+                "id",
+                "name",
+                "isProd",
+                "isStaging",
+                "pageTypes",
+                "order",
+                "lastUpdated",
+                "userUpdated"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "isProd": {
+                    "type": "boolean"
+                },
+                "isStaging": {
+                    "type": "boolean"
+                },
+                "pageTypes": {
+                    "type": "integer"
+                },
+                "order": {
+                    "type": "integer"
+                },
+                "lastUpdated": {
+                    "type": "string"
+                },
+                "userUpdated": {
+                    "type": "string"
+                }
+            }
+        },
+        "modulesHeader": {
+            "type": "array",
+            "items": {}
+        },
+        "modulesBody": {
+            "type": "array",
+            "items": {}
+        },
+        "modulesFooter": {
+            "type": "array",
+            "items": {}
+        }
+    }
+}
