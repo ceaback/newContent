@@ -14,9 +14,6 @@ Buscar Slides GET Modules
     ...    expected_status=${expected_status} 
     
     ${ID_SLIDE}               Set Variable      ${response.json()}[0][id]
-    ${TAGGING_PAGE}             Set Variable      ${response.json()}[0][targets][0][tagging]
-    ${INDEX_SLIDE}             Set Variable      ${response.json()}[0][targets][0][index]
-    ${RAND_NUMBER}             Set Variable      ${response.json()}[0][targets][0][randNumber]
 
     Return From Keyword    ${ID_SLIDE}
 

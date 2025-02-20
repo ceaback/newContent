@@ -13,6 +13,7 @@ Resource    ../utils/baseURL.robot
 Resource    ../resources/pages.robot
 Resource    ../resources/slides.robot
 Resource    ../resources/modules.robot
+Resource    ../resources/appLauncher.robot
 Resource    ../utils/session.robot
 
 ####inputs###

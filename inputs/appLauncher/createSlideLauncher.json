@@ -1,0 +1,19 @@
+{
+    "type": "_typeSlideLauncher",
+    "payload": {
+        "image": "_imgLauncher",
+        "urlImage": "_urlImageLauncher",
+        "idLogo": "_idLogo",
+         "targets": [
+            {
+                "title": "_titleLauncher"
+            }
+        ],
+        "title": "_titleLauncher",
+        "description": "_titleLauncher",
+        "accessibilityDescription": "_titleLauncher",
+        "isScheadule": "_isScheadule",
+        "idModule": "_idModuleLauncher",
+        "idPage": "_idPageLauncher"
+    }
+}
