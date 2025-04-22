@@ -61,11 +61,11 @@ Resource   ../utils/main.resource
 
 &{slide_true_staging}
 ...    type=app-slide-publish-staging-v1
-...    IsProduction= true
+...    IsStaging= true
 
 &{slide_false_staging}
 ...    type=app-slide-publish-staging-v1
-...    IsProduction= false
+...    IsStaging= false
 
 ###módulos***
 
@@ -79,8 +79,8 @@ Resource   ../utils/main.resource
 
 &{module_true_staging}
 ...    type=app-module-publish-staging-v1
-...    IsProd=true
+...    IsStaging=true
 
 &{module_false_staging}
 ...    type=app-module-publish-staging-v1
-...    IsProd=false
+...    IsStaging=false

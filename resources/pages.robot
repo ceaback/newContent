@@ -14,7 +14,7 @@ Criar Página
     ...    data={"type": "app-page-create-v1","payload": {"Name": "${NAME_PAGE}","PageTypeId": 1}}
     ...    expected_status=${expected_status}      
       
-    ${retorno_create}    Set Variable    ${response}
+    ${retorno_create}    Set Global Variable    ${response}
 
     Return From Keyword    ${NAME_PAGE}
 
@@ -32,6 +32,8 @@ Buscar Página
     ...    expected_status=${expected_status}
     ${ID_PAGE}               Set Variable      ${response.json()}[page][id]
     ${NAME_PAGE}             Set Variable      ${response.json()}[page][name]
+    Set Global Variable    ${ID_PAGE}
+    Set Global Variable    ${NAME_PAGE}
 
     Return From Keyword    ${ID_PAGE}
 Buscar Página Retornando Modulo    
@@ -45,7 +47,8 @@ Buscar Página Retornando Modulo
     ...    expected_status=${expected_status} 
     ${NAME_PAGE}             Set Variable      ${response.json()}[page][name]
     ${MODULE_ID}             Set Variable    ${response.json()}[modulesFooter][0][id]
-    
+    Set Global Variable    ${NAME_PAGE}
+    Set Global Variable    ${MODULE_ID}
     Return From Keyword    ${MODULE_ID}
     Return From Keyword    ${NAME_PAGE}
 

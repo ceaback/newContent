@@ -14,7 +14,7 @@ Buscar Slides GET Modules
     ...    expected_status=${expected_status} 
     
     ${ID_SLIDE}               Set Variable      ${response.json()}[0][id]
-
+    Set Global Variable    ${ID_SLIDE} 
     Return From Keyword    ${ID_SLIDE}
 
 Publicar Módulo Em Produção
@@ -25,7 +25,7 @@ Publicar Módulo Em Produção
     ${body}    Replace String Using Regexp    ${body}   _typeModuleProduction    ${file}[type]
     ${body}    Replace String Using Regexp    ${body}   _idModule                ${MODULE_ID}
     ${body}    Replace String Using Regexp    ${body}   _idPage                  ${ID_PAGE}
-    ${body}    Replace String Using Regexp    ${body}   "_isProduction"          ${file}[IsProd]
+    ${body}    Replace String Using Regexp    ${body}   "_isProd"          ${file}[IsProd]
 
     ${headers}    Create Dictionary      Content-Type=application/json
 
@@ -46,7 +46,7 @@ Despublicar Módulo Em Produção
     ${body}    Replace String Using Regexp    ${body}   _typeModuleProduction    ${file}[type]
     ${body}    Replace String Using Regexp    ${body}   _idModule                ${MODULE_ID}
     ${body}    Replace String Using Regexp    ${body}   _idPage                  ${ID_PAGE}
-    ${body}    Replace String Using Regexp    ${body}   "_isProduction"          ${file}[IsProd]
+    ${body}    Replace String Using Regexp    ${body}   "_isProd"          ${file}[IsProd]
 
     ${headers}    Create Dictionary      Content-Type=application/json
     
