@@ -99,3 +99,60 @@ Despublicar Slide Em Produção
     ...    expected_status=${expected_status}
      
     ${retorno_criar_Slide}    Set Variable    ${response}
+
+Publicar Slide Em Homologação
+     [Arguments]    ${ID_PAGE}    ${MODULE_ID}    ${SLIDE_ID}    ${file}    ${expected_status}
+
+    ${body}     Get File        path=${EXECDIR}\\inputs\\slides\\productionSlide.json
+
+    ${body}    Replace String Using Regexp    ${body}   _typeProduction          ${file}[type]
+    ${body}    Replace String Using Regexp    ${body}   _slideID                 ${SLIDE_ID}
+    ${body}    Replace String Using Regexp    ${body}   _idModule                ${MODULE_ID}
+    ${body}    Replace String Using Regexp    ${body}   _idPage                  ${ID_PAGE}
+    ${body}    Replace String Using Regexp    ${body}   "_isStaging"          ${file}[IsStaging]
+
+    ${headers}    Create Dictionary      Content-Type=application/json
+
+    ${response}    POST On Session
+    ...    alias=api    
+    ...    url=/commands    
+    ...    headers=${headers}
+    ...    data=${body}
+    ...    expected_status=${expected_status}
+     
+    ${retorno_criar_Slide}    Set Variable    ${response}
+
+Despublicar Slide Em Homologação
+     [Arguments]    ${ID_PAGE}    ${MODULE_ID}    ${SLIDE_ID}    ${file}    ${expected_status}
+
+    ${body}     Get File        path=${EXECDIR}\\inputs\\slides\\productionSlide.json
+
+    ${body}    Replace String Using Regexp    ${body}   _typeProduction          ${file}[type]
+    ${body}    Replace String Using Regexp    ${body}   _slideID                 ${SLIDE_ID}
+    ${body}    Replace String Using Regexp    ${body}   _idModule                ${MODULE_ID}
+    ${body}    Replace String Using Regexp    ${body}   _idPage                  ${ID_PAGE}
+    ${body}    Replace String Using Regexp    ${body}   "_isStaging"          ${file}[IsStaging]
+
+    ${headers}    Create Dictionary      Content-Type=application/json
+
+    ${response}    POST On Session
+    ...    alias=api    
+    ...    url=/commands    
+    ...    headers=${headers}
+    ...    data=${body}
+    ...    expected_status=${expected_status}
+     
+    ${retorno_criar_Slide}    Set Variable    ${response}
+
+Deletar Slide App Scroll
+     [Arguments]    ${SLIDE_ID}    ${expected_status}
+
+    ${headers}    Create Dictionary    Content-Type=application/json    Authorization=automacao-qa
+    ${response}    Post On Session    
+    ...    alias=api
+    ...    url=/commands    
+    ...    headers=${headers}
+    ...    data={"type": "app-slide-delete-v1","payload": {"id":"${SLIDE_ID}"}}
+    ...    expected_status=${expected_status}
+    
+    ${retorno_delete}    Set Variable    ${response}

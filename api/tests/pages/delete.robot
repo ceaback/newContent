@@ -6,6 +6,6 @@ Suite Teardown    Fechar Sessão
 
 *** Test Cases ***
 Teste Deletar Página
-    [Tags]    TC008
+    [Tags]    TC05
     Deletar Página    ID_PAGE=${ID_PAGE}    expected_status=204
     Deletar Página    ID_PAGE=${ID_PAGE}    expected_status=422

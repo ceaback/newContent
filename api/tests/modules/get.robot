@@ -6,5 +6,5 @@ Suite Teardown    Fechar Sessão
 
 *** Test Cases ***
 Buscar Módulos
-    [Tags]    TC009
+    [Tags]    TC01
     Deletar Página    ID_PAGE=${ID_PAGE}    expected_status=204
